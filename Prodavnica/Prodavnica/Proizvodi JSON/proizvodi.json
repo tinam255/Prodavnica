@@ -1,0 +1,40 @@
+[
+  {
+    "dobavljaci": {
+      "id": 2,
+      "dobavljac": "Fidem"
+    },
+    "dob_id": 2,
+    "kategorije": {
+      "id": 2,
+      "kategorija": "Majice"
+    },
+    "kat_id":  2,
+    "proizvodjaci": {
+      "id": "2",
+      "proizvodjac": "Balasevic"
+    },
+    "pr_id": 2,
+    "naziv": "Crna Haljina",
+    "cena": "5000"
+  },
+  {
+    "dobavljaci": {
+      "id": 2,
+      "dobavljac": "Fidem"
+    },
+    "dob_id": 2,
+    "kategorije": {
+      "id": 2,
+      "kategorija": "Majice"
+    },
+    "kat_id": 2,
+    "proizvodjaci": {
+      "id": "2",
+      "proizvodjac": "Balasevic"
+    },
+    "pr_id": 2,
+    "naziv": "Crne Pantalone",
+    "cena": "2500"
+  }
+]

@@ -1,0 +1,33 @@
+﻿@model IEnumerable<Prodavnica.Models.proizvodjaci>
+
+@{
+    ViewBag.Title = "Proizvodjaci";
+}
+
+<h2>Proizvodjaci</h2>
+
+<p>
+    @Html.ActionLink("Kreiraj nov proizvodjac", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.proizvodjac)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.proizvodjac)
+        </td>
+        <td>
+            @Html.ActionLink("Izmeni", "Edit", new { id=item.id }) |
+            @Html.ActionLink("Detalji", "Details", new { id=item.id }) |
+            @Html.ActionLink("Obrisi", "Delete", new { id=item.id })
+        </td>
+    </tr>
+}
+
+</table>

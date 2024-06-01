@@ -18,7 +18,7 @@ namespace Prodavnica.Models
         public int id { get; set; }
 
         [StringLength(50)]
-        public string naziv { get; set; }
+        public string proizvodjac { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<proizvodi> proizvodis { get; set; }

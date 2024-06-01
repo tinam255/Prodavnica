@@ -1,0 +1,26 @@
+﻿@model Prodavnica.Models.proizvodjaci
+
+@{
+    ViewBag.Title = "Detalji";
+}
+
+<h2>Detalji</h2>
+
+<div>
+    <h4>proizvodjac</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.proizvodjac)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.proizvodjac)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Izmeni", "Edit", new { id = Model.id }) |
+    @Html.ActionLink("Nazad na listu proizvodjaca", "Index")
+</p>

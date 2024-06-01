@@ -1,0 +1,58 @@
+﻿@model Prodavnica.Models.proizvodi
+
+@{
+    ViewBag.Title = "Detalji";
+}
+
+<h2>Detalji</h2>
+
+<div>
+    <h4>proizvod</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.dobavljaci.dobavljac)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.dobavljaci.dobavljac)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.kategorije.kategorija)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.kategorije.kategorija)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.proizvodjaci.proizvodjac)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.proizvodjaci.proizvodjac)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.naziv)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.naziv)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.cena)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cena)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Izmeni", "Edit", new { id = Model.id }) |
+    @Html.ActionLink("Nazad na listu proizvoda", "Index")
+</p>

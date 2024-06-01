@@ -8,7 +8,7 @@ namespace Prodavnica.Models
     public partial class Model1 : DbContext
     {
         public Model1()
-            : base("name=Model1")
+            : base("name=Model12")
         {
         }
 
@@ -20,7 +20,7 @@ namespace Prodavnica.Models
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Entity<dobavljaci>()
-                .Property(e => e.naziv)
+                .Property(e => e.dobavljac)
                 .IsUnicode(false);
 
             modelBuilder.Entity<dobavljaci>()
@@ -29,7 +29,7 @@ namespace Prodavnica.Models
                 .HasForeignKey(e => e.dob_id);
 
             modelBuilder.Entity<kategorije>()
-                .Property(e => e.naziv)
+                .Property(e => e.kategorija)
                 .IsUnicode(false);
 
             modelBuilder.Entity<kategorije>()
@@ -41,12 +41,8 @@ namespace Prodavnica.Models
                 .Property(e => e.naziv)
                 .IsUnicode(false);
 
-            modelBuilder.Entity<proizvodi>()
-                .HasOptional(e => e.proizvodi1)
-                .WithRequired(e => e.proizvodi2);
-
             modelBuilder.Entity<proizvodjaci>()
-                .Property(e => e.naziv)
+                .Property(e => e.proizvodjac)
                 .IsUnicode(false);
 
             modelBuilder.Entity<proizvodjaci>()

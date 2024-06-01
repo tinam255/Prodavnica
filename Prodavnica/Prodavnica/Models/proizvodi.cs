@@ -26,10 +26,6 @@ namespace Prodavnica.Models
 
         public virtual kategorije kategorije { get; set; }
 
-        public virtual proizvodi proizvodi1 { get; set; }
-
-        public virtual proizvodi proizvodi2 { get; set; }
-
         public virtual proizvodjaci proizvodjaci { get; set; }
     }
 }

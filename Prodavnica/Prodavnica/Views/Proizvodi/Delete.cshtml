@@ -1,0 +1,64 @@
+﻿@model Prodavnica.Models.proizvodi
+
+@{
+    ViewBag.Title = "Brisanje";
+}
+
+<h2>Brisanje</h2>
+
+<h3>Da li ste sigurni da zelite da obrisete proizvod?</h3>
+<div>
+    <h4>proizvod</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.dobavljaci.dobavljac)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.dobavljaci.dobavljac)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.kategorije.kategorija)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.kategorije.kategorija)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.proizvodjaci.proizvodjac)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.proizvodjaci.proizvodjac)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.naziv)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.naziv)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.cena)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cena)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Obrisi" class="btn btn-default" /> |
+            @Html.ActionLink("Nazad na listu proizvoda", "Index")
+        </div>
+    }
+</div>
